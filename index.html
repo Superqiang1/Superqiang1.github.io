@@ -1,2 +1,46 @@
 <p>Hello World!</p>
 <p>这是我的个人网页</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>爱心</title>
+  <style>
+    /* 心形的基本样式 */
+    .heart {
+      width: 100px;
+      height: 100px;
+      position: relative;
+    }
+
+    /* 心形的左半部分 */
+    .heart:before,
+    .heart:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 50px;
+      height: 80px;
+      background-color: red;
+      border-radius: 50px 50px 0 0;
+    }
+
+    .heart:before {
+      left: 50px;
+      transform: rotate(-45deg);
+      transform-origin: 0 100%;
+    }
+
+    /* 心形的右半部分 */
+    .heart:after {
+      left: 0;
+      transform: rotate(45deg);
+      transform-origin: 100% 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="heart"></div>
+</body>
+</html>
